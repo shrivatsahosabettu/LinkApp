@@ -16,8 +16,10 @@ except:
 
 class LinkApp(ctk.CTk):
     def __init__(self, is_dark):
-        super().__init__(fg_color=(BG_COLOR))
+        super().__init__(fg_color=(WHITE, BLACK))
+        ctk.set_appearance_mode(f'{"dark" if is_dark else "light"}')
         self.geometry(f'{APP_SIZE[0]}x{APP_SIZE[1]}')
+        # self.resizable(False, False)
         self.title('')
         # self.icon_path = self.resource(r'assets\empty.ico')
         # self.iconbitmap(self.icon_path)
@@ -61,16 +63,16 @@ class LinkApp(ctk.CTk):
         self.call_additional_frame()
     
     def create_top_frame(self):
-        self.top_frame = ctk.CTkFrame(self, fg_color=BG_COLOR, bg_color=BG_COLOR)
+        self.top_frame = ctk.CTkFrame(self, fg_color=(WHITE, BLACK), bg_color=(WHITE, BLACK))
         self.top_frame.grid(column=0, row=0, sticky='nsew')        
         
     def create_middle_frame(self):
-        self.middle_frame = ctk.CTkFrame(self, fg_color=BG_COLOR, bg_color=BG_COLOR)
+        self.middle_frame = ctk.CTkFrame(self, fg_color=(WHITE, BLACK), bg_color=(WHITE, BLACK))
         self.middle_frame.grid(column=0, row=1, sticky='nsew')
     def call_additional_frame(self):
          # additional Frame
-        self.bottom_frame = ctk.CTkFrame(self, fg_color=BG_COLOR, bg_color=BG_COLOR)
-        self.additional_frame = ctk.CTkFrame(self, fg_color=BG_COLOR, bg_color=BG_COLOR)
+        self.bottom_frame = ctk.CTkFrame(self, fg_color=(WHITE, BLACK), bg_color=(WHITE, BLACK))
+        self.additional_frame = ctk.CTkFrame(self, fg_color=(WHITE, BLACK), bg_color=(WHITE, BLACK))
         self.additional_frame.rowconfigure((0,1,2), weight=1, uniform='a')
         self.additional_frame.columnconfigure(0, weight=1, uniform='a')
         self.additional_frame.columnconfigure(1, weight=6, uniform='a')
@@ -83,9 +85,9 @@ class LinkApp(ctk.CTk):
     def top_frame_widgets(self):
         # Frame 1
         # Logo Image
-        self.label_header = ctk.CTkLabel(self, text="Application Links", font=('Roboto', 25), bg_color=BG_COLOR)   
+        self.label_header = ctk.CTkLabel(self, text="Application Links", font=('Roboto', 25), bg_color=(WHITE, BLACK))   
         self.label_header.grid(row=0, column=0, sticky='n', padx=10, pady=5)
-        self.label_note = ctk.CTkLabel(self, text="Note: Right click to delete the button\n ctrl+click to edit\n click to open the webpage", font=('Roboto', 12, 'bold'), bg_color=BG_COLOR) 
+        self.label_note = ctk.CTkLabel(self, text="Note: Right click to delete the button\n ctrl+click to edit\n click to open the webpage", font=('Roboto', 12, 'bold'), bg_color=(WHITE, BLACK)) 
         self.label_note.grid(row=0, column=0, sticky='w', padx=10, pady=5)   
  
         
@@ -94,7 +96,7 @@ class LinkApp(ctk.CTk):
             master=self, 
             text="Add Button", 
             variable=self.add_var, 
-            bg_color=BG_COLOR, 
+            bg_color=(WHITE, BLACK), 
             onvalue='on', 
             offvalue='off',
             command=self.bottom_frame_control)
@@ -102,14 +104,14 @@ class LinkApp(ctk.CTk):
         
     def middle_frame_widgets(self):
         self.middle_frame.rowconfigure((0,1,2,3,4,5,6,7,8,9,10), weight=1, uniform='b')
-        self.middle_frame.columnconfigure((0,1,2,3,4,5), weight=1, uniform='b')
+        self.middle_frame.columnconfigure((0,1,2,3,4), weight=1, uniform='b')
         
     def bottom_frame_widgets(self):
         self.button_name_label = ctk.CTkLabel(
             self.additional_frame, 
             text="Button Name *", 
             font=('Roboto', 15), 
-            bg_color=BG_COLOR, 
+            bg_color=(WHITE, BLACK), 
             corner_radius=10
             )
         self.button_name_label.grid(row=0, column=0, sticky='e', padx=5, pady=5)
@@ -120,8 +122,8 @@ class LinkApp(ctk.CTk):
             height=self.height, 
             textvariable=self.button_name_var,
             font=FONT, 
-            bg_color=BG_COLOR, 
-            fg_color=BG_COLOR,
+            bg_color=(WHITE, BLACK), 
+            fg_color=(WHITE, BLACK),
             corner_radius=5,
             border_color=HIGHLIGHT_COLOR,
             border_width=1)
@@ -131,7 +133,7 @@ class LinkApp(ctk.CTk):
             self.additional_frame, 
             text="Button Link *", 
             font=('Roboto', 15), 
-            bg_color=BG_COLOR, 
+            bg_color=(WHITE, BLACK), 
             corner_radius=10)
         button_link_label.grid(row=1, column=0, sticky='e', padx=5, pady=5)
         self.button_link_text = ctk.CTkEntry(
@@ -140,8 +142,8 @@ class LinkApp(ctk.CTk):
             height=self.height, 
             textvariable=self.button_link_var,
             font=FONT, 
-            bg_color=BG_COLOR, 
-            fg_color=BG_COLOR,
+            bg_color=(WHITE, BLACK), 
+            fg_color=(WHITE, BLACK),
             border_color=HIGHLIGHT_COLOR,
             corner_radius=5,
             border_width=1)
@@ -151,14 +153,14 @@ class LinkApp(ctk.CTk):
             self.additional_frame, 
             text="OK", 
             font=('Roboto', 15), 
-            bg_color=BG_COLOR, 
+            bg_color=(WHITE, BLACK), 
             corner_radius=10,
             command=lambda : self.create_button(self.edit_button_index))
         cancel_button = ctk.CTkButton(
             self.additional_frame, 
             text="Cancel", 
             font=('Roboto', 15), 
-            bg_color=BG_COLOR, 
+            bg_color=(WHITE, BLACK), 
             corner_radius=10,
             command=self.hide_bottom_frame)
         self.ok_button.grid(row=2, column=1, sticky='e', padx=155, pady=5)
@@ -180,7 +182,7 @@ class LinkApp(ctk.CTk):
     
     def initial_create_button(self, init_button_counter):
         init_new_button = Button(self.middle_frame, text=self.button_name_link_list[init_button_counter][0],
-                                row=len(self.button_list)//6, col=len(self.button_list)%6)
+                                row=len(self.button_list)//5, col=len(self.button_list)%5)
         self.button_list.append(init_new_button)
         self.next_button_num += 1
         init_new_button.bind("<Button-3>", lambda event, button=init_new_button: self.handle_right_click(button))     
@@ -189,7 +191,7 @@ class LinkApp(ctk.CTk):
     def create_button(self, button_index = None):
         if self.button_name_text.get() != '' and self.button_link_text.get() != '' and button_index == None:
             new_button = Button(self.middle_frame, text=self.button_name_text.get(),
-                                row=len(self.button_list)//6, col=len(self.button_list)%6)
+                                row=len(self.button_list)//5, col=len(self.button_list)%5)
             self.button_list.append(new_button)
             self.button_info = [self.button_name_text.get(), self.button_link_text.get()]
             self.button_name_link_list.append(self.button_info)
@@ -220,8 +222,8 @@ class LinkApp(ctk.CTk):
             
             # Rearrange the remaining buttons
             for i, button in enumerate(self.button_list):
-                row = i // 6
-                col = i % 6
+                row = i // 5
+                col = i % 5
                 button.grid(row=row, column=col)
             
             # Write the new button list to the file

@@ -8,6 +8,6 @@ class Button(CTkButton):
             master=parent,
             text=text,
             corner_radius=10,
-            bg_color=BG_COLOR
+            bg_color=(WHITE, BLACK)
             )
         self.grid(column=col, columnspan=1, row=row, sticky='nsew', padx=5, pady=5)
