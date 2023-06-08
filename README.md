@@ -19,3 +19,8 @@ Weblinks store as a widget
 2. PIP install pillow
 3. pip install CTkMessagebox
 4. Python 3.0
+
+# Keyboard & Mouse keys while using App
+1. Mouse Left Click to open the webpage associated with the button.
+2. Mouse Right Click to Delete the button(with confimation box).
+3. CTRL + Mouser Left Click to edit the button information.
