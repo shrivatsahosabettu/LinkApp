@@ -2,10 +2,10 @@
 Weblinks store as a widget
 
 # Installation instructions
-1. The app works well with colors in Dark mode only for now
+1. The app works based on your color mode dark or light
 ![image](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/99a4ed33-c6a5-4a4f-9095-8c8c78afa8bf)
 
-2. Make sure that you have more than 1000x800 resolution. If you are using 1920x1080 scale should not be 150%.
+2. The application is resizable, but make sure that it is going to truncate the button name if you keep very small window.
 ![image](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/1c458f7d-e154-41b9-9f3b-ed1514a7b952)
 
 3. If you recevie Windows Smart Screen detection click on _run anyway_
