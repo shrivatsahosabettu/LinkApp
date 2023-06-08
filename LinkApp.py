@@ -145,7 +145,7 @@ class LinkApp(ctk.CTk):
             border_color=HIGHLIGHT_COLOR,
             corner_radius=5,
             border_width=1)
-        self.button_link_text.grid(row=1, column=1, sticky='e', padx=5, pady=5)
+        self.button_link_text.grid(row=1, column=1, sticky='w', padx=5, pady=5)
         # Ok Button
         self.ok_button = ctk.CTkButton(
             self.additional_frame, 
