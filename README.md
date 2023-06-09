@@ -9,7 +9,8 @@ Weblinks store as a widget
 ![image](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/1c458f7d-e154-41b9-9f3b-ed1514a7b952)
 
 3. If you recevie Windows Smart Screen detection click on _run anyway_
-![windows-smart-screen-false-positive](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/2ea1a14a-1bcb-462d-b2ec-d1f2c802296c)
+![windows-smart-screen-false-positive](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/958c29bc-5696-4703-a919-432abcf8bbb2)
+
 
 # Demo of the App
 ![LinkApp](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/9430e1ee-16e5-4d77-b035-db9fd8c9caa2)
