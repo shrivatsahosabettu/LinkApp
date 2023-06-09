@@ -20,7 +20,7 @@ class LinkApp(ctk.CTk):
         super().__init__(fg_color=(WHITE, BG_COLOR))
         ctk.set_appearance_mode(f'{"dark" if is_dark else "light"}')
         self.geometry(f'{APP_SIZE[0]}x{APP_SIZE[1]}')
-        # self.resizable(False, False)
+        self.minsize(*map(int, '800x600'.split('x')))
         self.title('')
         # self.icon_path = self.resource(r'assets\empty.ico')
         # self.iconbitmap(self.icon_path)
