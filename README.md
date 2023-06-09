@@ -8,7 +8,7 @@ Weblinks store as a widget
 2. The application is resizable, but make sure that it is going to truncate the button name if you keep very small window.
 ![image](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/1c458f7d-e154-41b9-9f3b-ed1514a7b952)
 
-3. If you recevie Windows Smart Screen detection click on _run anyway_
+3. If you recevie Windows Smart Screen detection after making .exe click on _run anyway_
 ![windows-smart-screen-false-positive](https://github.com/shrivatsahosabettu/LinkApp/assets/12061573/958c29bc-5696-4703-a919-432abcf8bbb2)
 
 
