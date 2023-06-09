@@ -257,6 +257,7 @@ class LinkApp(ctk.CTk):
         new_text = self.button_name_text.get()
         new_link = self.button_link_text.get()
         button.configure(text=new_text)
+        self.edit_button_index = None
     
     # Write button to the file
     def write_button_list(self):
