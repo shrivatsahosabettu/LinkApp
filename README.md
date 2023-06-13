@@ -29,5 +29,5 @@ https://drive.google.com/drive/folders/1ZqMfOAnV_eNgwXyT6ZZcHbPy3brD1t9X?usp=sha
 
 # Keyboard & Mouse keys while using App
 1. Mouse Left Click to open the webpage associated with the button.
-2. CTRL + Mouser Left Click to Delete the button(with confimation box).
+2. CTRL + Mouse Left Click to Delete the button(with confimation box).
 3. Mouse Right Click to edit the button information.
